@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="com.jaspersoft.studio.dataAdapters">					    
+         <dataAdapter ClassFactory="net.wedjaa.jasper.elasticsearch.adapter.ESAdapterFactory"/>
+   </extension>
+   <extension
+         point="com.jaspersoft.studio.queryDesigner">
+               <queryDesigner
+            QueryDesignerClass="net.wedjaa.jasper.elasticsearch.query.ESQueryDesigner"
+            language="elasticsearch">
+      </queryDesigner>
+   </extension>
+      <extension
+         point="com.jaspersoft.studio.server.resources">
+      <resource
+            ClassFactory="net.wedjaa.jasper.elasticsearch.server.ESResourceFactory">
+      </resource>
+   </extension>
+</plugin>

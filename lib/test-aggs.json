@@ -1,0 +1,83 @@
+{
+  "size": 0, 
+  "aggs": {
+                                  "Heap Memory Statistics": {
+                                "filter": {
+                                    "query": {
+                                        "query_string": {
+                                           "query": "evt:HeapMemoryStatistics"
+                                        }
+                                    }
+                                },
+                                "aggs": {
+                                    "stats": {
+                                        "extended_stats" : { 
+                                            "field" : "rv2" 
+                                            
+                                        }
+                                    }
+                                }
+                            }
+,
+    "Sentinel": {
+                "filter" : {
+                    "range": {
+                        "dt" : {
+                            "from" : "2014-08-01",
+                            "to" : "2014-08-31"
+                        }
+                    }
+                },
+                "aggs": {
+                    "Alerts": {
+                        "date_histogram": {
+                            "min_doc_count": 0,
+                            "extended_bounds": {
+                                    "min" : "2014-08-01",
+                                    "max" : "2014-08-31"
+                            },
+                            "field": "dt",
+                            "format" : "yyyy-MM-dd",
+                            "interval": "1d"
+                        },
+                        "aggs": {
+                            "Event Throughput Capacity": {
+                                "filter": {
+                                    "query": {
+                                        "query_string": {
+                                           "query": "evt:EventThroughputCapacity"
+                                        }
+                                    }
+                                },
+                                "aggs": {
+                                    "stats": {
+                                        "extended_stats" : { 
+                                            "field" : "rv2" 
+                                            
+                                        }
+                                    }
+                                }
+                            },
+                            "Heap Memory Statistics": {
+                                "filter": {
+                                    "query": {
+                                        "query_string": {
+                                           "query": "evt:HeapMemoryStatistics"
+                                        }
+                                    }
+                                },
+                                "aggs": {
+                                    "stats": {
+                                        "extended_stats" : { 
+                                            "field" : "rv2" 
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
