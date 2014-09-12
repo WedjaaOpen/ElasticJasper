@@ -33,7 +33,7 @@ the following jars:
 where *x* stands for whatever minor version your installation is.
 
 Then you should follow the instructions on the 
-[ElasticSearchOSGI Repository][https://github.com/WedjaaOpen/ElasticSearchOSGI] to get 
+[ElasticSearchOSGI Repository](https://github.com/WedjaaOpen/ElasticSearchOSGI "ElasticSearchOSGI Repository") to get 
 yourself a *org.elasticsearch.osgi-1.1.2-bundle.jar* that you also need to import into
 your eclipse workspace.
 
@@ -41,7 +41,7 @@ Once you have all this pieces you're ready to compile the plugin and then you ne
 to create a *feature* and an *update site* in Eclipse that will allow you to install
 the plugin in Jaspersoft Studio.
 
-The source contains a -ESSearchTester.java- runnable piece. This is to test the
+The source contains a _ESSearchTester.java_ runnable piece. This is to test the
 inner workings of the plugin and to test if things you have changed have broken
 something.
 
