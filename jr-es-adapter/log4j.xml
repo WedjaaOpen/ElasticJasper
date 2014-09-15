@@ -11,7 +11,7 @@
   </appender> 
   
 	<logger name="net.wedjaa.jasper">
-	  <level value="trace"/> 
+	  <level value="info"/> 
 	</logger>
 
 	<logger name="org.exolab.castor">

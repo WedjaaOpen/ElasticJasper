@@ -21,6 +21,10 @@ package net.wedjaa.jasper.elasticsearch;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class ESSearchTester {
@@ -45,8 +49,8 @@ public class ESSearchTester {
 		
 		System.out.println("ES Search Testing started.");
 		
-		ESSearch search = new ESSearch("sentiwarn", "message", ESSearch.ES_MODE_AGGS,  "elastix.novalocal", 9300, null, null, "elasticsearch");
-		search.search(getQuery("test-aggs.json"));
+		ESSearch search = new ESSearch("sentiwarn", "message", ESSearch.ES_MODE_FACETS,  "elastix.novalocal", 9300, null, null, "elasticsearch");
+		search.search(getQuery("test-facets.json"));
 		Map<String, Object> hit = null;
 		while (  (hit = search.next()) != null ) {
 			System.out.println("Hit: {");
@@ -57,8 +61,8 @@ public class ESSearchTester {
 			System.out.println("};");
 		}
 		search.close();
-		/*
-		Map<String, Class<?>> fields = search.getFields(getQuery("test-aggs.json"));
+
+		Map<String, Class<?>> fields = search.getFields(getQuery("test-facets.json"));
 		List<String> sortedKeys=new ArrayList<String>(fields.keySet());
 		Collections.sort(sortedKeys);
 		Iterator<String> sortedKeyIter = sortedKeys.iterator();
@@ -66,7 +70,7 @@ public class ESSearchTester {
 			String fieldname = sortedKeyIter.next();
 			System.out.println(" --> " + fieldname + "["+ fields.get(fieldname).getCanonicalName() +"]");
 		}
-		*/
+
 	}
 
 }
