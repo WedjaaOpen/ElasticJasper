@@ -153,22 +153,24 @@ public class FacetResolver {
 		for (Method method : entryMethods) {
 			if (method.getName().startsWith("get")) {
 				String key = method.getName().substring(3);
-				try {
-					Object value = method.invoke(entry);
-					if (value != null && !value.toString().equals("NaN")) {
-						logger.debug("   entry[" + key + "] = " + value + " - "
-								+ value.getClass());
-						result.put(key, value);
+				if ( !key.equals("Class") ) {
+					try {
+						Object value = method.invoke(entry);
+						if (value != null && !value.toString().equals("NaN")) {
+							logger.debug("   entry[" + key + "] = " + value + " - "
+									+ value.getClass());
+							result.put(key, value);
+						}
+					} catch (IllegalAccessException e) {
+						logger.warn("Failed to execute method " + method.getName()
+								+ " on entry: " + entry);
+					} catch (IllegalArgumentException e) {
+						logger.warn("Failed to execute method " + method.getName()
+								+ " on entry: " + entry);
+					} catch (InvocationTargetException e) {
+						logger.warn("Failed to execute method " + method.getName()
+								+ " on entry: " + entry);
 					}
-				} catch (IllegalAccessException e) {
-					logger.warn("Failed to execute method " + method.getName()
-							+ " on entry: " + entry);
-				} catch (IllegalArgumentException e) {
-					logger.warn("Failed to execute method " + method.getName()
-							+ " on entry: " + entry);
-				} catch (InvocationTargetException e) {
-					logger.warn("Failed to execute method " + method.getName()
-							+ " on entry: " + entry);
 				}
 			}
 		}
