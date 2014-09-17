@@ -25,7 +25,7 @@ import org.apache.log4j.Logger;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRField;
-import net.wedjaa.jasper.elasticsearch.ESSearch;
+import net.wedjaa.elasticparser.ESSearch;
 
 /**
  *

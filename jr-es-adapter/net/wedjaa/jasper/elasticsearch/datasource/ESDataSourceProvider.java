@@ -28,7 +28,7 @@ import net.sf.jasperreports.engine.JRParameter;
 import net.sf.jasperreports.engine.JRValueParameter;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.base.JRBaseField;
-import net.wedjaa.jasper.elasticsearch.ESSearch;
+import net.wedjaa.elasticparser.ESSearch;
 
 /**
  *

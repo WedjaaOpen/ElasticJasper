@@ -34,7 +34,7 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.JasperReportsContext;
 import net.sf.jasperreports.engine.fill.JRFillParameter;
 import net.sf.jasperreports.engine.query.JRAbstractQueryExecuter;
-import net.wedjaa.jasper.elasticsearch.ESSearch;
+import net.wedjaa.elasticparser.ESSearch;
 import net.wedjaa.jasper.elasticsearch.datasource.ESDataSource;
 
 /**

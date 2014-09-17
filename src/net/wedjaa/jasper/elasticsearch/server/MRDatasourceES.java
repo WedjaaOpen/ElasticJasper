@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.sf.jasperreports.engine.JRConstants;
-import net.wedjaa.jasper.elasticsearch.ESSearch;
+import net.wedjaa.elasticparser.ESSearch;
 import net.wedjaa.jasper.elasticsearch.adapter.ESAdapterService;
 import net.wedjaa.jasper.elasticsearch.datasource.ESIconDescriptor;
 
