@@ -13,6 +13,6 @@ Export-Package: net.wedjaa.jasper.elasticsearch,
  net.wedjaa.jasper.elasticsearch.query
 Eclipse-RegisterBuddy: com.jaspersoft.studio.data
 Bundle-ClassPath: lib/elasticparser-0.5.1-SNAPSHOT.jar,lib/es-adapter.jar,.
-Require-Bundle: org.elasticsearch.osgi;bundle-version="1.1.2",
- com.jaspersoft.studio.data;bundle-version="5.6.0",
- com.jaspersoft.studio.server;bundle-version="5.6.0"
+Require-Bundle: com.jaspersoft.studio.data;bundle-version="5.6.0",
+ com.jaspersoft.studio.server;bundle-version="5.6.0",
+ org.elasticsearch.osgi;bundle-version="1.1.2"
