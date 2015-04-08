@@ -120,7 +120,8 @@ public class Activator extends AbstractUIPlugin {
 		// We need to instantiate our own logger, since
 		// this method can be called before we are instantiated.
 		/* 
-		 * TODO: We could make the logger available by initializing  it in a static portion of the class declaration. 
+		 * Note: We could make the logger available by initializing 
+		 *  it in a static portion of the class declaration. 
 		 */
 		Logger.getLogger(Activator.class)
 			.debug("Getting image descriptor from: " + path);

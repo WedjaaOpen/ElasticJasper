@@ -24,6 +24,7 @@ import com.jaspersoft.studio.data.adapter.IDataAdapterCreator;
 
 import net.sf.jasperreports.data.DataAdapter;
 import net.sf.jasperreports.data.DataAdapterService;
+import net.sf.jasperreports.engine.JasperReportsContext;
 import net.wedjaa.jasper.elasticsearch.Activator;
 
 import org.eclipse.swt.graphics.Image;
@@ -58,6 +59,7 @@ public class ESAdapterFactory implements DataAdapterFactory {
         return descriptor;
         
     }
+
 
     /*
      * (non-Javadoc)
@@ -111,6 +113,13 @@ public class ESAdapterFactory implements DataAdapterFactory {
         return null;
     }
 
+	@Override
+	public DataAdapterService createDataAdapterService(
+			JasperReportsContext jasperReportsContext, DataAdapter dataAdapter) {
+		return createDataAdapterService(dataAdapter);
+	}
+	
+	
     @Override
     public IDataAdapterCreator iReportConverter() {
             logger.info("Returning an elasticsearch creator!");
@@ -122,5 +131,6 @@ public class ESAdapterFactory implements DataAdapterFactory {
         logger.info("Returning false to isDeprecated");
     	return false;
     }
+
 
 }

@@ -7,14 +7,13 @@ allow some of our clients to migrate to ElasticSearch without loosing the report
 capabilities of Jasper Reports and their integration with Jaspersoft Server.
 
 If you want to take the plugin for a spin you can install it without compiling it in 
-Jaspersoft Studio 5.6.0 and later versions by adding the update site for this plugin:
+Jaspersoft Studio 6.0.0 and later versions by adding the update site for this plugin:
 
     https://github.com/WedjaaOpen/ElasticJasperSite/raw/master/
 
 Instructions on how to use the plugin can be found on our [Official Blog](http://blog.wedjaa.net/ "Wedjaa - The Blog").
 
-The adapter - which will be compiled in **lib/es-adapter.jar** can be used directly
-from a Java application that uses Jasper Reports.
+The adapter can be used directly from a Java application that uses Jasper Reports.
 
 How To Compile
 --------------
@@ -25,24 +24,20 @@ of pieces in your workspace.
 From an installation of Jaspersoft Studio you will need to import as plug-in/fragments
 the following jars:
 
-  - com.jaspersoft.studio.data_5.6.*x*.final.jar
-  - com.jaspersoft.studio_5.6.*x*.final.jar
-  - net.sf.jasperreports_5.6.*x*.final.jar
+  - com.jaspersoft.studio.data_6.0.*x*.final.jar
+  - com.jaspersoft.studio_6.0.*x*.final.jar
+  - net.sf.jasperreports_6.0.*x*.final.jar
 
 where *x* stands for whatever minor version your installation is.
 
 Then you should follow the instructions on the 
 [ElasticSearchOSGI Repository](https://github.com/WedjaaOpen/ElasticSearchOSGI "ElasticSearchOSGI Repository") to get 
-yourself a *org.elasticsearch.osgi-1.1.2-bundle.jar* that you also need to import into
+yourself a *org.elasticsearch.osgi-1.4.2-bundle.jar* that you also need to import into
 your eclipse workspace.
 
 Once you have all this pieces you're ready to compile the plugin and then you need
 to create a *feature* and an *update site* in Eclipse that will allow you to install
 the plugin in Jaspersoft Studio.
-
-The source contains a _ESSearchTester.java_ runnable piece. This is to test the
-inner workings of the plugin and to test if things you have changed have broken
-something.
 
 Support
 -------

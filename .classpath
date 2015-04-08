@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry exported="true" kind="lib" path="lib/jr-es-adapter-1.2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/parser-1.2.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins">
 		<accessrules>
 			<accessrule kind="accessible" pattern="org.elasticsearch/**"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="/elasticparser/target/elasticparser-0.5.1-SNAPSHOT.jar" sourcepath="/elasticparser/src/main/java"/>
-	<classpathentry kind="src" output="lib" path="jr-es-adapter"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/elasticparser"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ElasticParser"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
