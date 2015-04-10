@@ -11,7 +11,7 @@ Jaspersoft Studio 6.0.0 and later versions by adding the update site for this pl
 
     https://github.com/WedjaaOpen/ElasticJasperSite/raw/master/
 
-Instructions on how to use the plugin can be found on our [Official Blog](http://blog.wedjaa.net/ "Wedjaa - The Blog").
+Instructions on how to use the plugin can be found on our [Official Blog](http://blog.wedjaa.net/elasticjasper-one/ "Wedjaa - The Blog").
 
 The adapter can be used directly from a Java application that uses Jasper Reports.
 
