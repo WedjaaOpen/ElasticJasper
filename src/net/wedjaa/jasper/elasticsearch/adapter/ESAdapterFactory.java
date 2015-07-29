@@ -100,9 +100,9 @@ public class ESAdapterFactory implements DataAdapterFactory {
     public Image getIcon(int size) {
         logger.info("Was requested an icon of size " + size + " - returning the only one we have!");
         if (size == 16) {
-            return Activator.getImage(Activator.ICON_NAME);
+            return Activator.getDefault().getImage(Activator.ICON_NAME);
         }
-        return Activator.getImage(Activator.ICON_NAME);
+        return Activator.getDefault().getImage(Activator.ICON_NAME);
     }
 
     public DataAdapterService createDataAdapterService(DataAdapter dataAdapter) {
