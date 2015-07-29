@@ -45,22 +45,22 @@ import com.jaspersoft.studio.utils.jasper.JasperReportsConfiguration;
  * @author Fabio Torchetti
  */
 public class ESAdapterDescriptor extends DataAdapterDescriptor implements IFieldsProvider, IWizardDataEditorProvider {
-    
+
 	public static final long serialVersionUID = JRConstants.SERIAL_VERSION_UID;
-	
+
 	private static final Logger logger = Logger.getLogger(ESAdapterDescriptor.class);
-	
+
 	private IFieldsProvider fieldsProvider;
 
 	@Override
 	public ESAdapter getDataAdapter() {
-		
+
 		if (dataAdapter == null)
 			dataAdapter = new ESAdapterImplementation();
-	
+
 		return (ESAdapter) dataAdapter;
 	}
-	
+
 	@Override
 	public ESAdapterEditor getEditor() {
 		return new ESAdapterEditor();
@@ -69,29 +69,28 @@ public class ESAdapterDescriptor extends DataAdapterDescriptor implements IField
 	@Override
 	public Image getIcon(int size) {
 		logger.debug("Fetching an image of size: " + size);
-		
+
 		Activator activator = Activator.getDefault();
 		logger.debug("Activator: " + activator);
-		if ( activator == null ) {
+		if (activator == null) {
 			logger.debug("Activator is null");
 			return null;
 		}
-		
-		Image image = Activator.getImage(Activator.ICON_NAME);
-		
-		if ( image == null ) {
+
+		Image image = Activator.getDefault().getImage(Activator.ICON_NAME);
+
+		if (image == null) {
 			logger.warn("Could not find image for: " + Activator.ICON_NAME);
 			return null;
 		}
-		
+
 		logger.debug("Returning an icon.");
 		return image;
-		
+
 	}
 
-	
-	public List<JRDesignField> getFields(DataAdapterService con, JasperReportsConfiguration jConfig, JRDataset reportDataset)
-			throws JRException, UnsupportedOperationException {
+	public List<JRDesignField> getFields(DataAdapterService con, JasperReportsConfiguration jConfig,
+			JRDataset reportDataset) throws JRException, UnsupportedOperationException {
 		getFieldProvider();
 		return fieldsProvider.getFields(con, jConfig, reportDataset);
 	}
@@ -110,5 +109,5 @@ public class ESAdapterDescriptor extends DataAdapterDescriptor implements IField
 	public AWizardDataEditorComposite createDataEditorComposite(Composite parent, WizardPage page) {
 		return new WizardQueryEditorComposite(parent, page, this, ESDataSource.QUERY_LANGUAGE);
 	}
-        
+
 }
