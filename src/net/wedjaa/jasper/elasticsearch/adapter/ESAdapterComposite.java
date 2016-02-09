@@ -23,6 +23,7 @@ import com.jaspersoft.studio.data.DataAdapterDescriptor;
 
 import net.sf.jasperreports.data.DataAdapter;
 import net.sf.jasperreports.engine.JasperReportsContext;
+import net.wedjaa.elasticparser.ESSearch;
 
 import org.eclipse.core.databinding.beans.PojoObservables;
 import org.eclipse.jface.databinding.swt.SWTObservables;
@@ -91,9 +92,8 @@ public class ESAdapterComposite extends ADataAdapterComposite {
 	
 	private Combo createComboField() {
 		Combo comboField = new Combo(this, SWT.BORDER);
-		comboField.add("Hits Mode - Returns Hits Data", 0);
-		comboField.add("Facets Mode - Returns Facets Data", 1);
-		comboField.add("Aggregation Mode - Returns Aggregations Data", 2);
+		comboField.add("Hits Mode - Returns Hits Data", ESSearch.ES_MODE_HITS);
+		comboField.add("Aggregation Mode - Returns Aggregations Data", ESSearch.ES_MODE_AGGS);
 		comboField.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1));
 		return comboField;
 	}
