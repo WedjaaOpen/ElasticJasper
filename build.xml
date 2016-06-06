@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="ElasticSearchStudio">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../../../opt/eclipse/"/>
+    <property name="WORKSPACE" value="/home/mrwho/workspace/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="Plug-in Dependencies.libraryclasspath">
+        <pathelement location="../../../../../es-osgi-bundle"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.databinding.property_1.5.0.v20150422-0725.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/net.sf.jasperreports_6.2.2.final.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/jasperreports-fonts-6.1.1.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/jasperreports-6.2.2-20160505.150232-15.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/spring/spring-expression-3.2.16.RELEASE.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/spring/spring-beans-3.2.16.RELEASE.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/spring/spring-core-3.2.16.RELEASE.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/castor-core-1.3.3.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/castor-xml-1.3.3.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/jasperreports-chart-themes-6.2.2-20160505.150354-3.jar"/>
+        <pathelement location="${WORKSPACE}net.sf.jasperreports/lib/jasperreports-functions-6.2.2-20160505.150541-3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio/com.jaspersoft.studio_6.2.2.final.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio/resources/lib/DummyDataAdapter.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio/lib/opal-1.0.1.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio/lib/commons-validator-1.3.1.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio/lib/commons-net-3.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio/lib/velocity-1.7-dep.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/com.jaspersoft.studio.data_6.2.2.final.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/eigenbase-properties-1.1.0.10924.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/eigenbase-resgen-1.3.0.11873.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/commons-math-1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/mondrian-3.2.0-13661-JS.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/eigenbase-xom-1.3.0.11999.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/commons-vfs-1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/olap4j-1.1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/olap4j-xmla-1.1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.data/lib/javacup-0.10k.jar" />
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/woodstox-core-asl-4.4.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-datatype-json-org-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-module-jaxb-annotations-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-datatype-guava-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-jaxrs-base-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-datatype-jsr353-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-module-jsonSchema-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/stax2-api-3.1.4.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-dataformat-xml-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-jaxrs-xml-provider-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-jaxrs-json-provider-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jackson/jackson-datatype-joda-2.4.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/js-extra-classes.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/js_axis-1.4patched.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jasperserver-dto-6.1.0-SNAPSHOT.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/json-20131018.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/jsr250-api-1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/javax.json-api-1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/net.java.html.json-0.6.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/cglib-2.2.0-b23.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/javax.json-1.0.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/core-2.2.0-b24.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/jsonp-jaxrs-1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey/asm-all-repackaged-2.2.0-b24.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-common-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-media-json-2.0-m05-1.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-media-json-jackson-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/mimepull-1.9.6.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-apache-connector-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-media-json-processing-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-guava-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-client-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/html-json-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jersey213/jersey-media-multipart-2.13.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/js-common.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/api/javax.ws.rs-api-2.0.1.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/hk2-api-2.3.0-b10.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/validation-api-1.1.0.Final.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/javassist-3.18.1-GA.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/asm-debug-all-5.0.2.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/hk2-utils-2.3.0-b10.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/osgi-resource-locator-1.0.1.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/hk2-locator-2.3.0-b10.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/persistence-api-1.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/org.osgi.core-4.2.0.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/javax.annotation-api-1.2.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/aopalliance-repackaged-2.3.0-b10.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/javax.inject-2.3.0-b10.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/lib/jaxrs-ri/ext/jaxb-api-2.2.7.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server/com.jaspersoft.studio.server_6.2.2.final.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server.soap/lib/js_activation-1.1.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server.soap/lib/js_jaxrpc.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server.soap/lib/js_saaj-api-1.3.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server.soap/lib/js_mail-1.4.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server.soap/lib/js_wsdl4j-1.5.1.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.server.soap/com.jaspersoft.studio.server.soap_6.2.2.final.jar"/>
+        <pathelement location="${WORKSPACE}com.jaspersoft.studio.properties/com.jaspersoft.studio.properties_6.2.2.final.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui_3.107.0.v20150507-1945.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.swt_3.104.1.v20150825-0743.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.swt.gtk.linux.x86_64_3.104.1.v20150825-0743.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jface_3.11.0.v20150602-1400.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.commands_3.7.0.v20150422-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.workbench_3.107.0.v20150825-2206.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.e4.ui.workbench3_0.13.0.v20150422-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.runtime_3.11.1.v20150903-1804.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/javax.annotation_1.2.0.v201401042248.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/javax.inject_1.0.0.v20091030.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.osgi_3.10.101.v20150820-1432.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.osgi.compatibility.state_1.0.100.v20150402-1551.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.equinox.common_3.7.0.v20150402-1709.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.jobs_3.7.0.v20150330-2103.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.runtime.compatibility.registry_3.6.0.v20150318-1505/runtime_registry_compatibility.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.equinox.registry_3.6.0.v20150318-1503.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.equinox.preferences_3.5.300.v20150408-1437.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.contenttype_3.5.0.v20150421-2214.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.equinox.app_1.3.300.v20150423-1356.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.resources_3.10.1.v20150725-1910.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jdt.core_3.11.1.v20150902-1521.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jdt.compiler.tool_1.1.0.v20150513-2007.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jdt.compiler.apt_1.2.0.v20150514-0146.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jdt.launching_3.8.0.v20150527-0946.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jdt.ui_3.11.1.v20150827-1306.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jface.text_3.10.0.v20150603-1752.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.text_3.5.400.v20150505-1044.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.editors_3.9.0.v20150213-1939.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.filebuffers_3.5.500.v20140723-1040.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.ide_3.11.0.v20150825-2158.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.views_3.8.0.v20150422-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.team.core_3.7.100.v20150203-1452.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.navigator_3.6.0.v20150422-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.xml.resolver_1.2.0.v201005080400.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.xml.serializer_2.7.1.v201005080400.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.databinding_1.5.0.v20150422-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.databinding.observable_1.5.0.v20150422-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.jface.databinding_1.7.0.v20150406-2148.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.databinding.beans_1.3.0.v20150422-0725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.xalan_2.7.1.v201005080400.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.commons.io_2.2.0.v201405211200.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.commons.logging_1.1.1.v201101211721.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.equinox.security_1.2.100.v20150423-1356.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.w3c.dom.svg_1.1.0.v201011041433.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.xerces_2.9.0.v201101211617.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/javax.xml_1.3.4.v201005080400.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.httpcomponents.httpclient_4.3.6.v201411290715.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.httpcomponents.httpcore_4.3.3.v201411290715.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.console_3.6.100.v20150822-1912.jar"/>
+        <pathelement location="../../../../../com.jaspersoft.studio"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.cheatsheets_3.4.200.v20131227-1524.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.filesystem_1.5.0.v20150725-1910.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.gef_3.10.1.201508170204.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.draw2d_3.10.1.201508170204.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.help.ui_4.0.100.v20140401-0608.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.help.base_4.0.300.v20150904-0015.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.help_3.6.0.v20130326-1254.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.expressions_3.5.0.v20150421-2214.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
+        <pathelement location="../../../../../com.jaspersoft.studio.data"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.commons.pool_1.6.0.v201204271246.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.commons.lang_2.6.0.v201404270220.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.slf4j.api_1.7.2.v20121108-1250.jar"/>
+        <pathelement location="../../../../../com.jaspersoft.studio.server"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.core.net_1.2.300.v20141118-1725.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/com.ibm.icu_54.1.1.v201501272100.jar"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.apache.commons.codec_1.6.0.v201305230611.jar"/>
+        <pathelement location="../../../../../com.jaspersoft.studio.server.soap"/>
+        <pathelement location="${ECLIPSE_HOME}plugins/org.eclipse.ui.workbench.texteditor_3.9.100.v20141023-1946.jar"/>
+    </path>
+    <path id="ElasticSearchStudio.classpath">
+        <pathelement location="lib/jr-es-adapter-2.2.1-snapshot.jar"/>
+        <pathelement location="lib/parser-2.2.1-snapshot.jar"/>
+        <pathelement location="bin"/>
+        <path refid="Plug-in Dependencies.libraryclasspath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="ElasticSearchStudio.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

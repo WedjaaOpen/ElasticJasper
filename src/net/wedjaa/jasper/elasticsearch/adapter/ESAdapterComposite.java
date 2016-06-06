@@ -39,6 +39,7 @@ import org.eclipse.swt.widgets.Combo;
  *
  * @author Fabio Torchetti
  */
+@SuppressWarnings("deprecation")
 public class ESAdapterComposite extends ADataAdapterComposite {
     
 
