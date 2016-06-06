@@ -105,18 +105,15 @@ public class ESAdapterFactory implements DataAdapterFactory {
         return Activator.getDefault().getImage(Activator.ICON_NAME);
     }
 
-    public DataAdapterService createDataAdapterService(DataAdapter dataAdapter) {
-        logger.info("Returning a service for data adapter: " + dataAdapter.getClass().getName());
-        if (dataAdapter instanceof ESAdapter)
-            return new ESAdapterService((ESAdapter) dataAdapter);
-        logger.info("Returning null, I don't know what the are talking about!");
-        return null;
-    }
-
+    
 	@Override
 	public DataAdapterService createDataAdapterService(
 			JasperReportsContext jasperReportsContext, DataAdapter dataAdapter) {
-		return createDataAdapterService(dataAdapter);
+        logger.info("Returning a service for data adapter: " + dataAdapter.getClass().getName());
+        if (dataAdapter instanceof ESAdapter)
+            return new ESAdapterService(jasperReportsContext, (ESAdapter) dataAdapter);
+        logger.info("Returning null, I don't know what the are talking about!");
+        return null;
 	}
 	
 	

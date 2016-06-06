@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="lib" path="/home/mrwho/Projects/GitHub/ElasticJasper/lib/jr-es-adapter-2.2.0.jar"/>
-	<classpathentry kind="lib" path="/home/mrwho/Projects/GitHub/ElasticJasper/lib/parser-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/home/mrwho/Projects/GitHub/ElasticJasper/lib/jr-es-adapter-2.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/mrwho/Projects/GitHub/ElasticJasper/lib/parser-2.2.1.jar"/>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins">
 		<accessrules>
 			<accessrule kind="accessible" pattern="org.elasticsearch/**"/>
 		</accessrules>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -18,14 +18,9 @@
 
 package net.wedjaa.jasper.elasticsearch.server;
 
-import net.wedjaa.jasper.elasticsearch.adapter.ESAdapterService;
-import net.wedjaa.elasticparser.ESSearch;
-
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.PojoObservables;
-import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.jface.databinding.swt.SWTObservables;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -43,6 +38,11 @@ import com.jaspersoft.studio.server.utils.ResourceDescriptorUtil;
 import com.jaspersoft.studio.server.wizard.resource.APageContent;
 import com.jaspersoft.studio.utils.Misc;
 
+import net.wedjaa.elasticparser.ESSearch;
+import net.wedjaa.jasper.elasticsearch.adapter.ESAdapterService;
+
+
+@SuppressWarnings("deprecation")
 public class DatasourceESPageContent extends APageContent {
 
 	private Text esHostField;
