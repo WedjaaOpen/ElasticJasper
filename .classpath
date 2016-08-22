@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="lib" path="/home/mrwho/Projects/GitHub/ElasticJasper/lib/jr-es-adapter-2.2.1.jar"/>
-	<classpathentry kind="lib" path="/home/mrwho/Projects/GitHub/ElasticJasper/lib/parser-2.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jr-es-adapter-2.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/parser-2.3.0.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins">
 		<accessrules>
